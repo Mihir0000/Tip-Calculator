@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Tip Calculator</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row max-height align-items-center">
+            <div class="col-10 mx-auto col-md-8">
+                <div class="card">
+                    <div class="card-title p-2">
+                        <h3 class="text-uppercase text-center">tip calculator</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- end of  card title -->
+                        <div class="feedback text-center alert  text-capitalize p-1">
+                            your feedback
+                        </div>
+                        <form id='tip-form'>
+                            <!-- single input -->
+                            <div class="my-4">
+                                <h5 class="text-capitalize mb-2">how much was your bill ?</h5>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bill-icon"><i
+                                                class="fas fa-dollar-sign fa-fw"></i></span>
+                                    </div>
+                                    <input type="number" class="form-control form-control-lg" id="input-bill">
+                                </div>
+                            </div>
+                            <!-- end of single input -->
+                            <!-- single input -->
+                            <div class="my-4">
+                                <h5 class="text-capitalize mb-2">how many people sharing the bill ?</h5>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text user-icon"><i
+                                                class="fas fa-user fa-fw"></i></span>
+                                    </div>
+                                    <input type="number" class="form-control form-control-lg" id="input-users">
+                                </div>
+                            </div>
+                            <!-- end of single input -->
+                            <!-- single input -->
+                            <div class="my-4">
+
+                                <h5 class="text-capitalize mb-2">how was your service</h5>
+                                <div class="form-group">
+
+                                    <select class="form-control form-control-lg text-capitalize" id="input-service">
+                                        <option selected value="0">Choose...</option>
+
+                                    </select>
+                                </div>
+
+                            </div>
+                            <!-- end of single input -->
+
+                            <input type="submit" class="d-block mx-auto text-capitalize btn submitBtn w-75"
+                                value="calculate">
+                        </form>
+                        <div class="loader text-center">
+                            <img src="./img/Facebook-1s-200px.gif" alt="">
+                        </div>
+                        <!-- results -->
+                        <div class="results text-center my-3">
+                            <h3 class="text-capitalize">tip amount<span> $ </span><span id="tip-amount"></span></h3>
+                            <h3 class="text-capitalize">total amount<span> $ </span><span id="total-amount"></span></h3>
+                            <h3 class="text-capitalize">each person owns<span> $ </span><span id="person-amount"></span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <!-- main js -->
+    <script src="./app.js"></script>
+</body>
+
+</html>
